@@ -1,0 +1,3 @@
+<launch>
+  <node pkg="cad_gt_carla" name="cad_gt_carla" type="cad_gt_carla"/>
+</launch>
