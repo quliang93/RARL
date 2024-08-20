@@ -104,6 +104,9 @@ Use the `rqt_image_view` to check the `/bev_perception` topic. If the following 
 then the entire configuration has been successfully completed.
 
 ## Training
+
+The entire training process consists of two curriculum learning phases. The first phase involves training in regular scenarios. After completing the first phase, the second phase focuses on training for different adversarial scenarios, with the preloaded weights for the second phase being the best weights obtained from the first phase. The complete training process is as follows.
+
 ### 2.1 Launch carla
 ```Shell
 carla_no_rendering
@@ -119,6 +122,9 @@ roslaunch carla_ros_bridge stra_town02.launch
 conda activate carla12
 cd STRA_RL
 python train_stage_I.py
+
+# after stage I training finished, start training stage II
+python train_stage_II.py
 ```
 
 ## Testing
