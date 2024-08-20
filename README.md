@@ -81,7 +81,7 @@ cp settings/launch_configs/dsb_objects_bev.json (your carla-ros-bridge)/catkin_w
 
 ### 1.4 Environment check
 After the environment configuration is complete, you can follow the steps below to verify if the configuration was successful.
-
+You can use a tool like Conda to manage your environment. The other required packages for the environment can be referenced in `stra_rl_environment.yaml`. I have created a package environment named `carla12` for the entire project.
 #### 1.4.1 launch carla
 
 ```Shell
@@ -90,15 +90,17 @@ carla_no_rendering
 
 #### 1.4.2 launch carla-ros-bridge
 ```Shell
+conda activate carla12
 roslaunch carla_ros_bridge stra_rl_town02.launch
 ```
 #### 1.4.3 environment check
 ```Shell
+conda activate carla12
 cd STRA_RL/
 python stra_rl_config.py
 ```
 
-Use the **rqt_image_view** to check the **/bev_perception** topic. If the following screen appears,
+Use the `rqt_image_view` to check the `/bev_perception` topic. If the following screen appears,
 then the entire configuration has been successfully completed.
 
 ## Training
@@ -108,11 +110,13 @@ carla_no_rendering
 ```
 ### 2.2 Launch the carla-ros-bridge
 ```Shell
+conda activate carla12
 roslaunch carla_ros_bridge stra_town02.launch
 ```
 
 ### 2.3 Start training
 ```Shell
+conda activate carla12
 cd STRA_RL
 python train_stage_I.py
 ```
