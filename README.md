@@ -17,15 +17,15 @@ through Spatial-Temporal Risk Aware Reinforcement Learning**.
 The implementation of the entire project depends on the following environments:
 
 -  ROS Noetic
-- CARLA 0.9.12
+- carla 0.9.12
 - carla-ros-bridge 0.9.12
 
-Please ensure that CARLA and the ROS bridge are successfully configured on your system before proceeding with the subsequent environment configurations. The following content may help you complete the setup of the above environments.
+Please ensure that carla and the ROS bridge are successfully configured on your system before proceeding with the subsequent environment configurations. The following content may help you complete the setup of the above environments.
 
-We are using the CARLA-0.9.12 Released version. 
-Download [CARLA-0.9.12 and AdditionalMaps-0.9.12](https://github.com/carla-simulator/carla/releases). Then you can follow the steps below to configure the simulation environment.
+We are using the carla-0.9.12 Released version. 
+Download [carla-0.9.12 and AdditionalMaps-0.9.12](https://github.com/carla-simulator/carla/releases). Then you can follow the steps below to configure the simulation environment.
 
-### 1.1 CARLA config
+### 1.1 carla config
 
 ```Shell
 mkdir carla12
@@ -47,7 +47,7 @@ export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/examples
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI
 
-# we write two alias to open Carla in two modes [render on or off]
+# we write two alias to open carla in two modes [render on or off]
 alias carla="(where your carla)/carla12/CarlaUE4.sh"
 alias carla_no_rendering="(where your carla)/carla12/CarlaUE4.sh -RenderOffScreen"
 ```
@@ -81,16 +81,19 @@ cp settings/launch_configs/dsb_objects_bev.json (your carla-ros-bridge)/catkin_w
 
 ### 1.4 Environment check
 After the environment configuration is complete, you can follow the steps below to verify if the configuration was successful.
+
+#### 1.4.1 launch carla
+
 ```Shell
-# open a terminal to launch carla
 carla_no_rendering
+```
 
-# open a terminal to launch the ros-bridge
-conda activate stc
+#### 1.4.2 launch carla-ros-bridge
+```Shell
 roslaunch carla_ros_bridge ablation_ours_bev_town2.launch
-
-# open a terminal to run the script.
-conda activate stc
+```
+#### 1.4.3 environment check
+```Shell
 cd STRA_RL/
 python stra_rl_config.py
 ```
@@ -99,7 +102,20 @@ Use the **rqt_image_view** to check the **/bev_perception** topic. If the follow
 then the entire configuration has been successfully completed.
 
 ## Training
-Coming soon.
+### 2.1 Launch carla
+```Shell
+carla_no_rendering
+```
+### 2.2 Launch the carla-ros-bridge
+```Shell
+roslaunch carla_ros_bridge stra_town02.launch
+```
+
+### 2.3 Start training
+```Shell
+cd STRA_RL
+python train_stage_I.py
+```
 
 ## Testing
 Coming soon.
