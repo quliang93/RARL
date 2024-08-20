@@ -90,7 +90,7 @@ carla_no_rendering
 
 #### 1.4.2 launch carla-ros-bridge
 ```Shell
-roslaunch carla_ros_bridge ablation_ours_bev_town2.launch
+roslaunch carla_ros_bridge stra_rl_town02.launch
 ```
 #### 1.4.3 environment check
 ```Shell
