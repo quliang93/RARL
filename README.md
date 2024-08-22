@@ -103,6 +103,8 @@ python stra_rl_config.py
 Use the `rqt_image_view` to check the `/bev_perception` topic. If the following screen appears,
 then the entire configuration has been successfully completed.
 
+<img src="figures/env_obs.png" width="60%">
+
 ## Training
 
 The entire training process consists of two curriculum learning phases. The first phase involves training in regular scenarios. After completing the first phase, the second phase focuses on training for different adversarial scenarios, with the preloaded weights for the second phase being the best weights obtained from the first phase. The complete training process is as follows.
