@@ -103,7 +103,7 @@ python stra_rl_config.py
 Use the `rqt_image_view` to check the `/bev_perception` topic. If the following screen appears,
 then the entire configuration has been successfully completed.
 
-<img src="figures/env_obs.png" width="60%">
+<img src="figures/env_obs.png" width="80%">
 
 ## Training
 
@@ -130,7 +130,14 @@ python train_stage_II.py
 ```
 
 ## Testing
-Coming soon.
+Follow 2.1-2.3 to launch carla and ros-bridge, and then
+```Shell
+# test driving agent in high-dense dynamic scenarios
+python test.py
+
+# test driving agent in adversarial scenarios
+python test_adversarial.py
+```
 
 ## Demo
 Coming soon.

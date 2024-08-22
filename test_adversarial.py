@@ -45,7 +45,7 @@ json_name = list(scenarios_route.keys())[0].split("_")[0]
 
 total_test_results = []
 
-adversarial_scenarios = ["stop"]
+adversarial_scenarios = ["crossing"]
 
 
 def run(env: BEVENV, policy, action_bound: list):
@@ -151,8 +151,7 @@ if __name__ == "__main__":
     reward = None
     action_bound = [[-1, -1], [1, 1]]
 
-    # 2. prepare the policy network and pretrained checkpoints ()
-    # policy_checkpoints_path = "checkpoints_II/best.pth"
+    # 2. prepare the policy network and pretrained checkpoints
     policy_checkpoints_path = "./5429_best.pth"
     policy = CNNPolicy(frames= BEV_INPUT_CHANNELS, action_space = 2)
     policy.cuda()
