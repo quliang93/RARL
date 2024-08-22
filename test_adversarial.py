@@ -45,32 +45,18 @@ json_name = list(scenarios_route.keys())[0].split("_")[0]
 
 total_test_results = []
 
-adversarial_scenarios = ["crossing"]
+adversarial_scenarios = ["crossing"] # stop, crossing, merge, reverse
 
 
 def run(env: BEVENV, policy, action_bound: list):
-    global_step = 0
-    adversarial_failure = 0  # failure cause: collision or lane-off.
-    # collision_score = 1
+
     for id in range(length_of_test_episodes):
-        collision_score = 1
-
-        adversarial_collision_times = 0
-
-        epside_passed = True
-        lateral_off_total = 0
-        candidate_collision_step = 0
 
         env.reset_test(scenarios_list[id])
-        global_route_length = len(env.global_planner.original_global_waypoints)
         # prepare the adversary scenarios .
         scenarios_type = random.choice(adversarial_scenarios)
         spawn_npc_subprocess = subprocess.Popen(["python", "Scenarios/adversary_scenarios_generator_v3.py", scenarios_type, scenarios_list[id]])
         time.sleep(1)
-        
-        # Test BEVRL agent in normal crowded scenes, here we spawn pedestrian=60, vechiels=120
-        # spawn_npc_subprocess = subprocess.Popen(["python", "Scenarios/spawn_npc.py"])
-        # time.sleep(4)
 
         terminal = False
         result = None
@@ -92,21 +78,6 @@ def run(env: BEVENV, policy, action_bound: list):
             if result in ["invalid-stop", "over-speed", "collision", "run-off"]:
                 epside_passed = False # that means the current test episode didn't pass successfully
 
-
-            if result == "collision":
-                rospy.loginfo(f"Collision event notice !!!")
-                collision_score = collision_score * 0.7
-                adversarial_collision_times += 1
-
-
-            if result == "collision" or result == "run-off":
-                adversarial_failure += 1
-
-
-            # calculate the lateral off-lane distance of each step .
-            lateral_off_total += current_dis_lateral
-
-
             ep_reward += r
 
             # get next state
@@ -120,22 +91,8 @@ def run(env: BEVENV, policy, action_bound: list):
         os.kill(spawn_npc_subprocess.pid, signal.SIGINT)
         time.sleep(2)
 
-        episode_result = {"Scenarios_route": scenarios_list[id], "adversarial_type": scenarios_type,
-                          "pass": epside_passed, "collision_score": collision_score, "collision_times": adversarial_collision_times,
-                          "route_complete": (global_route_length - len(env.global_planner.global_path_waypoints))/global_route_length,
-                          "alod": lateral_off_total / step, "reward": ep_reward}
-        print(episode_result)
-
-        total_test_results.append(episode_result)
-
         for i in range(5):
             bev_env.run_step([0, 0])
-
-    print(f"Recording All Test Results ...")
-    with open(f"test_results_adversarial_{json_name}.json", 'w', encoding= 'utf-8') as f:
-        json.dump(total_test_results, f, ensure_ascii=False, indent=4)
-
-    print(f"Total adversarial event failure: {adversarial_failure} !")
 
     print(f"Quit !")
 
@@ -152,7 +109,7 @@ if __name__ == "__main__":
     action_bound = [[-1, -1], [1, 1]]
 
     # 2. prepare the policy network and pretrained checkpoints
-    policy_checkpoints_path = "./5429_best.pth"
+    policy_checkpoints_path = "checkpoints_II/best.pth"
     policy = CNNPolicy(frames= BEV_INPUT_CHANNELS, action_space = 2)
     policy.cuda()
     policy.eval() # eval mode .
