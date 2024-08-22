@@ -30,8 +30,8 @@ RL_TRAINING_DEVICE = gpu_devices - 1
 
 writer = SummaryWriter("./stage_I_logs")
 
-torch_seed = 5429 # SEED : 5429, 7159
-torch.manual_seed(torch_seed) # To remember QingDao Time.
+torch_seed = 5429
+torch.manual_seed(torch_seed)
 
 MAX_EPISODES = 8000
 HORIZON = 1024
@@ -39,7 +39,6 @@ GAMMA = 0.99
 LAMDA = 0.95
 BATCH_SIZE = 128
 EPOCH = 4
-#COEFF_ENTROPY = 5e-4
 COEFF_ENTROPY = 1e-3
 CLIP_VALUE = 0.1
 NUM_ENV = 1

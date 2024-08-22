@@ -1560,12 +1560,7 @@ class BEVENV:
         current_throttle = propri_obs[0]
         current_steer = propri_obs[1]
 
-        # smooth
-        # if np.abs(current_steer - self.previous_steer) > 0.3:
-        #     reward_smooth = -0.05 # if steer change to sharply, we penalize such actions.
-
         if np.abs(current_steer - self.previous_steer) > 0.3:
-            # reward_smooth = -0.3 * np.abs(current_steer - self.previous_steer) # if steer change to sharply, we penalize such actions.
             reward_smooth = -0.07
         curr_vel = propri_obs[2]  # current vel
         curr_dis_lateral = propri_obs[4]  # current lateral distance to lane
@@ -1892,10 +1887,6 @@ class BEVENV:
 
 
         return R, done, result, curr_dis_lateral, is_collision_step
-
-
-
-
 
 
     def reset(self):
