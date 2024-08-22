@@ -1,24 +1,3 @@
-# Date: 2024-3-27
-# By: ZYN
-# Notice: This script is designed for calculating different metrics for Ablation Study.
-
-"""
-Readme: The whole test process is to evaluate our method with different methods or ablation settings.
-So, the Metric we select is the four items:
-
-Success Rate (SR): if current episode is accomplished without any collision, curb invasion, and navigate to target point
-finally, we regard this episode as ONE successful episode.
-
-Collision Rate (CR): we calculate the candidate collision steps ratio to the all episode steps. Once the distance between
-self-vehicle to nearest obstacle(vehicle, pedestrian) is less than a Threshold, while its velocity is not zero. We regard
-the step is candidate collision step.
-
-Average Lane-Off Distance (ALOD): average of distance between self-vehicle to lane center of each step.
-
-Average Reward (AR): average reward of test episodes.
-
-"""
-
 import os
 import signal
 import subprocess
@@ -26,7 +5,6 @@ import time
 import rospy
 from tensorboardX import SummaryWriter
 from envs.bev_env_ours import BEVENV
-
 
 writer = SummaryWriter("./ablation_study_writer")
 

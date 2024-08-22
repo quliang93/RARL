@@ -1,12 +1,11 @@
 """
-Goal: A simple recovery train loop designed for BEVRL project.
+Goal: A simple recovery train loop designed for STRA_RL project.
 Date: 2023.12.30, By ZYN.
 Notice:
     For using carla & carla-ros-bridge, the train-loop usually breakdown. So I prepare to
     add the checkpoint mechanism provided by PyTorch to make the Reward-Episode Curve look constant
     from scratch.
 """
-
 import os
 import random
 import time
