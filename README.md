@@ -1,7 +1,7 @@
-# Enhancing Driving Safety in Adversarial Scenarios through Spatial-Temporal Risk Aware Reinforcement Learning
+# Reinforcement Learning for Autonomous Driving through Spatio-Temporal Risk Awareness in Adversarial Scenarios
 
-This repository contains the code for the paper **Enhancing Driving Safety in Adversarial Scenarios 
-through Spatial-Temporal Risk Aware Reinforcement Learning**.
+This repository contains the code for the paper **Reinforcement Learning for Autonomous Driving 
+through Spatio-Temporal Risk Awareness in Adversarial Scenarios**.
 
 
 <img src="figures/dense-dynamic-scenarios.gif">
