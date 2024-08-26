@@ -55,10 +55,10 @@ alias carla_no_rendering="(where your carla)/carla12/CarlaUE4.sh -RenderOffScree
 
 Regarding the configuration of the carla-ros-bridge, you can refer to the [official link](https://github.com/carla-simulator/ros-bridge).
 
-### 1.2 Spatial-Critical Rep package compile
+### 1.2 Spatial Critical Representation (SCR) package compile
 
 To use the spatial-critical representation(SCR), we have written a C++ ROS package. The
-SCR is a perception method based on ray-casting output format, which has been mentioned in our previous work. The configuration steps are
+SCR is a perception method based on ray-casting output format, which has been mentioned in our [previous work](https://ieeexplore.ieee.org/abstract/document/10242384). The configuration steps are
 as follows.
 
 ```Shell
