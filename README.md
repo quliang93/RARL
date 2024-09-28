@@ -1,4 +1,4 @@
-# Reinforcement Learning for Autonomous Driving through Spatio-Temporal Risk Awareness in Adversarial Scenarios
+# Risk-Aware Reinforcement Learning with Spatio-Temporal Adversary Representation for Autonomous Driving
 
 This repository contains the code for the paper **Reinforcement Learning for Autonomous Driving 
 through Spatio-Temporal Risk Awareness in Adversarial Scenarios**.
