@@ -1566,7 +1566,7 @@ class BEVENV:
         curr_dis_lateral = propri_obs[4]  # current lateral distance to lane
         curr_diff_angle = propri_obs[5]  # current diff angle between wpt and agent
 
-        if curr_dis_lateral >= 0.7: # original 1.05
+        if curr_dis_lateral >= 0.3: # original 1.05
             reward_deviation = -0.1
 
         alpha_rew = 1 - np.abs(curr_diff_angle / self.angle_diff_max) if np.abs(
@@ -1629,7 +1629,7 @@ class BEVENV:
             done = True
             result = "Goal"
 
-        if step >= 550: # 550
+        if step >= 500: # 550
             done = True
             result = "Time out"
 
