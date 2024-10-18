@@ -4,13 +4,13 @@ This repository contains the code for the paper **Risk-Aware Reinforcement Learn
 
 <figure>
   <img src="figures/dense-dynamic-scenarios.gif">
-  <figcaption style="margin-top: 8px; font-style: italic;"> Performance under Non-Adversarial Scenarios </figcaption>
+  <figcaption style="margin-top: 2px; font-style: italic;"> Performance under Non-Adversarial Scenarios </figcaption>
 </figure>
 
 
 <figure>
   <img src="figures/adversarial-performance.gif" alt="Adversarial Performance Comparison" style="max-width: 100%;">
-  <figcaption style="margin-top: 8px; font-style: italic;">Performance under Adversarial Scenarios.</figcaption>
+  <figcaption style="margin-top: 2px; font-style: italic;">Performance under Adversarial Scenarios.</figcaption>
 </figure>
 
 
