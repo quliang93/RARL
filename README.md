@@ -2,14 +2,14 @@
 
 This repository contains the code for the paper **Risk-Aware Reinforcement Learning with Spatio-Temporal Adversary Representation for Autonomous Driving**.
 
+**_Performance under Non-Adversarial Scenarios_**
 <figure>
   <img src="figures/dense-dynamic-scenarios.gif">
-  <figcaption> Performance under Non-Adversarial Scenarios </figcaption>
 </figure>
 
+**_Performance under Adversarial Scenarios_**
 <figure>
-  <img src="figures/adversarial-performance.gif" alt="Adversarial Performance Comparison" style="max-width: 100%;">
-  <figcaption>Performance under Adversarial Scenarios.</figcaption>
+  <img src="figures/adversarial-performance.gif">
 </figure>
 
 
