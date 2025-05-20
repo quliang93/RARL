@@ -1,6 +1,9 @@
-# Risk-Aware Reinforcement Learning with Spatio-Temporal Adversary Representation for Autonomous Driving
+# RAKD: Risk-Aware Knowledge Distillation for Autonomous Driving under Adversarial Scenarios
 
-This repository contains the code for the paper **Risk-Aware Reinforcement Learning with Spatio-Temporal Adversary Representation for Autonomous Driving**.
+This repository contains the code for the paper **RAKD: Risk-Aware Knowledge Distillation for Autonomous Driving under
+Adversarial Scenarios**. RAKD comprises a reinforcement learning-based teacher with access to privileged information 
+and a pure vision-based sensorimotor student. The performance of the privileged teacher under the RAKD framework in
+non-adversarial and adversarial scenarios is as follows:   
 
 **_Performance under Non-Adversarial Scenarios_**
 <figure>
@@ -15,9 +18,9 @@ This repository contains the code for the paper **Risk-Aware Reinforcement Learn
 
 ## Contents
 1. [Setup](#setup)
-2. [Training](#training)
-3. [Testing](#testing)
-4. [Demo](#demo)
+2. [RL Teacher Training](#rl-teacher-training)
+3. [RL Teacher Testing](#rl-teacher-testing)
+4. [Vision-based Student](#vision-based-student)
 5. [References](#References)
 
 ## Setup
@@ -62,14 +65,14 @@ alias carla_no_rendering="(where your carla)/carla12/CarlaUE4.sh -RenderOffScree
 
 Regarding the configuration of the carla-ros-bridge, you can refer to the [official link](https://github.com/carla-simulator/ros-bridge).
 
-### 1.2 Spatial Critical Representation (SCR) package compile
+### 1.2 Polar Safety Boundary (PSB) package compile
 
-To use the spatial-critical representation(SCR), we have written a C++ ROS package. The
-SCR is a perception method based on ray-casting output format, which has been mentioned in our [previous work](https://ieeexplore.ieee.org/abstract/document/10242384). The configuration steps are
+To use the PSB representation, we have written a C++ ROS package. The
+PSB is a perception method based on ray-casting output format, which has been mentioned in our [previous work](https://ieeexplore.ieee.org/abstract/document/10242384). The configuration steps are
 as follows.
 
 ```Shell
-git clone https://github.com/quliang93/STRA_RL
+git clone https://github.com/quliang93/RAKD
 cd settings
 cp -r cad_gt_carla (your carla-ros-bridge)/catkin_ws/src/ros-bridge/
 
@@ -113,7 +116,7 @@ then the entire configuration has been successfully completed.
 
 <img src="figures/env_obs.png" width="80%">
 
-## Training
+## RL Teacher Training
 
 The entire training process consists of two curriculum learning phases. The first phase involves training in regular scenarios. After completing the first phase, the second phase focuses on training under different adversarial scenarios, with the preloaded weights for the second phase being the best weights obtained from the first phase. The complete training process is as follows.
 
@@ -137,7 +140,7 @@ python train_stage_I.py
 python train_stage_II.py
 ```
 
-## Testing
+## RL Teacher Testing
 Follow 2.1-2.3 to launch carla and ros-bridge, and then
 ```Shell
 # test driving agent in high-dense dynamic scenarios
@@ -147,7 +150,7 @@ python test.py
 python test_adversarial.py
 ```
 
-## Demo
+## Vision-based Student
 Coming soon.
 
 ## References
