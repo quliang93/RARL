@@ -21,7 +21,8 @@ non-adversarial and adversarial scenarios is as follows:
 2. [RL Teacher Training](#rl-teacher-training)
 3. [RL Teacher Testing](#rl-teacher-testing)
 4. [Vision-based Student](#vision-based-student)
-5. [References](#References)
+5. [Video Demonstration](#video-demonstration)
+6. [References](#References)
 
 ## Setup
 
