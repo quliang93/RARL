@@ -35,7 +35,6 @@ total_test_results = []
 
 adversarial_scenarios = ["crossing"] # stop, crossing, merge, reverse
 
-
 def run(env: BEVENV, policy, action_bound: list):
 
     for id in range(length_of_test_episodes):

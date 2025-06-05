@@ -30,7 +30,6 @@ scenarios_list = list(scenarios_route.keys())
 length_of_test_episodes = len(list(scenarios_route.keys()))
 json_name = list(scenarios_route.keys())[0].split("_")[0]
 
-
 total_test_results = []
 
 

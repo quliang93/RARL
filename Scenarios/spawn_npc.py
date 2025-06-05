@@ -24,7 +24,6 @@ except IndexError:
 import carla
 
 from carla import VehicleLightState as vls
-
 import argparse
 import logging
 from numpy import random

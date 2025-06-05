@@ -10,7 +10,6 @@ writer = SummaryWriter("./ablation_study_writer")
 
 BEV_INPUT_CHANNELS = 10
 
-
 def run(env: BEVENV):
     for id in range(0, 100):
         bev_env.reset()

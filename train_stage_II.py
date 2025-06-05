@@ -221,7 +221,6 @@ if __name__ == "__main__":
         print("##################################################")
         start_episode = 0
 
-
     # 4. start training .
     try:
         run(env=bev_env, policy=policy, policy_path=policy_checkpoints_pth,
