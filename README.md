@@ -7,12 +7,12 @@ non-adversarial and adversarial scenarios is as follows:
 
 **_Performance under Non-Adversarial Scenarios_**
 <figure>
-  <img src="figures/dense-dynamic-scenarios.gif">
+  <img src="figures/common_performance.gif">
 </figure>
 
 **_Performance under Adversarial Scenarios_**
 <figure>
-  <img src="figures/adversarial-performance.gif">
+  <img src="figures/risk_aware_performance.gif">
 </figure>
 
 
@@ -114,7 +114,7 @@ python stra_rl_config.py
 Use the `rqt_image_view` to check the `/bev_perception` topic. If the following screen appears,
 then the entire configuration has been successfully completed.
 
-<img src="figures/env_obs.png" width="80%">
+<img src="figures/env_settings.png" width="80%">
 
 ## RL Teacher Training
 
