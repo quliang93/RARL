@@ -11,7 +11,6 @@ from torch.nn import functional as F
 import torchvision.models as models
 from .utils import log_normal_density
 
-
 def make_backbone(input_channels=10):
     resnet50 = models.resnet50(weights=models.ResNet50_Weights.DEFAULT)
     resnet50.conv1 = nn.Conv2d(input_channels, 64, kernel_size= 7, stride= 2, padding= 3, bias= False)

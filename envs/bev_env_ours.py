@@ -1642,7 +1642,6 @@ class BEVENV:
 
         R = R - risk_aware_reward
 
-
         # print(f"****************************** STEP : {step} *************************************")
         # print(f"Delta steer compared to last steer : {np.abs(current_steer - self.previous_steer)}")
         # print(f"Delta angle diff between ego and wpt: {curr_diff_angle}")

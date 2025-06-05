@@ -10,7 +10,6 @@ hostname = socket.gethostname()
 if not os.path.exists('./log/' + hostname):
     os.makedirs('./log/' + hostname)
 ppo_file = './log/' + hostname + '/ppo.log'
-
 logger_ppo = logging.getLogger('loggerppo')
 logger_ppo.setLevel(logging.INFO)
 ppo_file_handler = logging.FileHandler(ppo_file, mode='a')

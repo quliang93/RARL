@@ -15,7 +15,6 @@ class Waypoint:
         self.qz = pose.orientation.z
         self.qw = pose.orientation.w
 
-
 class GlobalPlanner:
     def __init__(self, global_path_msg: Path):
         self.global_path_msg = global_path_msg

@@ -16,7 +16,6 @@ def yaw_to_rotation_matrix(yaw):
     rotation_matrix = np.array([[c, -s], [s, c]])
     return rotation_matrix
 
-
 def transform_objects_to_ego_vehicle_frame(ego_odom_msg: Odometry, obj: Object) -> (Object, BoundingBox):
     """
     This function could transform object(ROS standard format) from 'map' frame to 'ego_vehicle' frame.
