@@ -423,7 +423,6 @@ def main():
         time.sleep(1.5)
         # rospy.sleep(0.5)
 
-
 if __name__ == "__main__":
     try:
         main()

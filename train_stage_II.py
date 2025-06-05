@@ -190,7 +190,6 @@ if __name__ == "__main__":
     policy_checkpoints_pth = "checkpoints_II/"
     last_epoch_checkpoint = policy_checkpoints_pth + "last.pth"
 
-
     # 3. For training the stage II, load the best state dict from stage I.
     # best_pre_checkpoint_path = "checkpoints_I/best.pth"
     best_pre_checkpoint_path = "./5429_best.pth"

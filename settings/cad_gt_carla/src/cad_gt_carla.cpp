@@ -10,7 +10,6 @@
 #include "Eigen/Eigen"
 #include <chrono>
 
-
 std::map<std::string, cv::Vec3b> label_bgr={
         {"vehicle",  cv::Vec3b(142, 0, 0)},
         {"road",     cv::Vec3b(128, 64, 128)},

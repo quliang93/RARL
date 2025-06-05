@@ -50,7 +50,6 @@ if __name__ == "__main__":
     reward = None
     action_bound = [[-1, -1], [1, 1]]
     print(f"*************** Test Environment Prepared ! ***************")
-
     # 3. start testing ...
     try:
         run(bev_env)

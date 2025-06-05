@@ -117,20 +117,3 @@ if __name__ == "__main__":
         run(bev_env, policy, action_bound)
     except KeyboardInterrupt:
         pass
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

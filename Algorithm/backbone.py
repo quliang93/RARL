@@ -143,5 +143,4 @@ if __name__ == "__main__":
     print(mean[0])
     policy_network.evaluate_actions(bev_tensor_gpu, propri_tensor_gpu, mean[0])
 
-
     print(f"Evaluated !")

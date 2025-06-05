@@ -41,7 +41,6 @@
   <!--node name="base_ego_tf_publisher" pkg="tf" type="static_transform_publisher"
           args="0 0 0 0 0 0 base_link ego_vehicle 50"/-->
 
-
   <!-- Add description file -->
   <include file="$(find vehicle_description)/launch/vehicle_description.launch" />
   <include file="$(find carla_waypoint_publisher)/launch/carla_waypoint_publisher.launch" />
