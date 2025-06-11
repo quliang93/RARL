@@ -155,6 +155,7 @@ python test_adversarial.py
 Coming soon.
 
 ## Video Demonstration
+_Click the image below to watch._
 [![HRL-KCAP Simulation](https://img.youtube.com/vi/MWwc_Boehng/0.jpg)](https://www.youtube.com/watch?v=MWwc_Boehng)
 
 
