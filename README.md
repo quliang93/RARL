@@ -5,12 +5,12 @@ Adversarial Scenarios**. RAKD comprises a reinforcement learning-based teacher w
 and a pure vision-based sensorimotor student. The performance of the privileged teacher under the RAKD framework in
 non-adversarial and adversarial scenarios is as follows:   
 
-**_Performance under Non-Adversarial Scenarios_**
+**_Performance in Non-Adversarial Scenarios_**
 <figure>
   <img src="figures/common_performance.gif">
 </figure>
 
-**_Performance under Adversarial Scenarios_**
+**_Performance in Adversarial Scenarios_**
 <figure>
   <img src="figures/risk_aware_performance.gif">
 </figure>
