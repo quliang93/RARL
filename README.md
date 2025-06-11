@@ -1,4 +1,4 @@
-# RAKD: Risk-Aware Knowledge Distillation for Autonomous Driving under Adversarial Scenarios
+# RAKD: Risk-Aware Knowledge Distillation for Autonomous Driving in Adversarial Scenarios
 
 This repository contains the code for the paper **RAKD: Risk-Aware Knowledge Distillation for Autonomous Driving under
 Adversarial Scenarios**. RAKD comprises a reinforcement learning-based teacher with access to privileged information 
