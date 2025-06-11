@@ -155,6 +155,9 @@ python test_adversarial.py
 Coming soon.
 
 ## Video Demonstration
+[![HRL-KCAP Simulation](https://img.youtube.com/vi/MWwc_Boehng/0.jpg)](https://www.youtube.com/watch?v=MWwc_Boehng)
+
+
 
 ## References
 We appreciate these following related works: [rl-collision-avoidance](https://github.com/Acmece/rl-collision-avoidance), [carla-bireye-view](https://github.com/deepsense-ai/carla-birdeye-view), [carla-roach](https://github.com/zhejz/carla-roach), and [CADLabeler](https://github.com/BruceXSK/CADLabeler).
